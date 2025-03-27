@@ -1,0 +1,51 @@
+#details {
+  .logo {
+    view-transition-name: card-logo;
+  }
+  .card-title {
+    view-transition-name: card-title;
+  }
+  .add-icon {
+    view-transition-name: add-button;
+  }
+}
+
+
+
+
+
+
+#details {
+  container: details / size;
+  display: flex;
+  justify-content: center;
+
+  .card {
+    --padding: 4em;
+    display: grid;
+    grid-template-columns: [start-col] var(--padding) [content-start] 1fr [content-end] var(--padding) [end-col];
+    grid-template-rows: var(--padding);
+    grid-auto-rows: max-content;
+    justify-items: center;
+    align-items: center;
+
+    > * {
+      grid-column: content-start / content-end;
+      
+      &.ignore-col-padding {
+        grid-column: start-col / end-col;
+      }
+    }
+
+    .card-content {
+      display: flex;
+      gap: 2em;
+  
+      .card-title {
+        text-transform: uppercase;
+        font-size: 2em;
+        font-weight: 600;
+      }
+    }
+  }
+}
