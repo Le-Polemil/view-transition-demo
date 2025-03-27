@@ -2,46 +2,54 @@
 
 This project is a Demo for View Transition API.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Getting Started with This Mind-Blowing Demo
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+So you've stumbled upon this incredible View Transition API demo, eh? Lucky you! Let's get this party started.
+
+### Prerequisites
+
+- A modern browser that supports View Transition API (Chrome 111+ is your friend here)
+- Node.js installed (if your Node installation is older than your last relationship, maybe update it)
+- A willingness to be amazed
+
+### Installation
+
+Choose your weapon:
+
+#### 🧶 For Yarn Enthusiasts
+
+```Bash
+yarn install
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### 🧶 For the others
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```Bash
+npm install
+npm run dev
 ```
+
+### 🎉 Ready to Roll
+
+Now, you're all set to experience the magic of View Transition API. Just run `npm run dev` and watch your components transform before your eyes.
+
+### 📦 Project Structure
+
+```Bash
+src/
+├── components/
+│ ├── Card.tsx
+│ └── DropArea.tsx
+│ └── icons/
+│ │ └── Add.tsx
+│ │ └── ArrowDownLeft.tsx
+│ │ └── UTurnRight.tsx
+└── pages/
+│ ├── App.tsx
+│ └── Details.tsx
+```
+
+### 🌟 Key Features
+
+- I'm just trying to understand how to use the View Transition API with React and React Router.
