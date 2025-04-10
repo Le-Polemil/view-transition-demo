@@ -6,9 +6,10 @@ type DropAreaProps = {
   alwaysDisplay?: boolean;
   children?: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 };
 
-export default function DropArea({ className, onDrop, active, alwaysDisplay, children }: DropAreaProps) {
+export default function DropArea({ className, style, onDrop, active, alwaysDisplay, children }: DropAreaProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   const showArea = () => {
@@ -39,6 +40,7 @@ export default function DropArea({ className, onDrop, active, alwaysDisplay, chi
         }
       }}
       onDragOver={(ev) => active && ev.preventDefault()}
+      style={style}
     >
       {children}
     </div>
