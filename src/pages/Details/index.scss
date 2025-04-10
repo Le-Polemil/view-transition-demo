@@ -1,12 +1,22 @@
 #details {
-  .logo {
-    view-transition-name: card-logo;
-  }
-  .card-title {
-    view-transition-name: card-title;
-  }
-  .add-icon {
-    view-transition-name: add-button;
+  .card {
+    view-transition-class: card;
+
+    .img {
+      view-transition-name: card-img;
+    }
+    .card-title {
+      view-transition-name: card-title;
+    }
+    .step-icon {
+      view-transition-name: step-icon;
+    }
+    .thumbs-up-icon {
+      view-transition-name: thumbs-up-icon;
+    }
+    .arrow-icon {
+      view-transition-name: arrow-icon;
+    }
   }
 }
 
@@ -24,7 +34,7 @@
     --padding: 4em;
     display: grid;
     grid-template-columns: [start-col] var(--padding) [content-start] 1fr [content-end] var(--padding) [end-col];
-    grid-template-rows: var(--padding);
+    grid-template-rows: var(--padding) 1fr var(--padding);
     grid-auto-rows: max-content;
     justify-items: center;
     align-items: center;
