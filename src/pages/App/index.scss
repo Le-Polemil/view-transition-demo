@@ -1,13 +1,20 @@
 #list {
-  .card.clicked {
-    .logo {
-      view-transition-name: card-logo;
-    }
-    .card-title {
-      view-transition-name: card-title;
-    }
-    .add-icon {
-      view-transition-name: add-button;
+  .card {
+    view-transition-class: card;
+
+    &.clicked {
+      .img {
+        view-transition-name: card-img;
+      }
+      .card-title {
+        view-transition-name: card-title;
+      }
+      .thumbs-up-icon {
+        view-transition-name: thumbs-up-icon;
+      }
+      .applause-icon {
+        view-transition-name: applause-icon;
+      }
     }
   }
 }
@@ -16,9 +23,10 @@
   container: list / size;
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: [start-col] 1fr 0.15fr [content-start] 0.7fr [content-end] 0.15fr [away-column] 0.7fr [end-col] 0.3fr;
+  grid-template-columns: [start-col] 0.85fr 0.15fr [content-start] 1fr [content-end] 0.15fr [away-column] 0.7fr [end-col] 0.15fr;
+  grid-auto-rows: min-content 1fr;
 
-  align-items: center;
+  align-items: start;
 
   > * {
     grid-column: content-start / content-end;
@@ -29,21 +37,19 @@
 
     &.away-column {
       grid-column: away-column / end-col;
-      grid-row: 1 / span 1000;
     }
   }
 
-  .logo {
+  .img {
     will-change: filter;
     transition: filter 300ms;
   }
-  .logo:hover {
+  .img:hover {
     filter: drop-shadow(0 0 2em #646cffaa);
   }
 
 
   .card {
-    padding: 1.5em;
     transition: scale 0.1s ease-in-out;
     scale: 1;
     cursor: pointer;

@@ -61,7 +61,6 @@ function App() {
           <Fragment key={id}>
             <Card
               id={id}
-              className={id === "dubstep" ? "clicked" : undefined}
               index={index}
               name={name}
               image={image}
@@ -82,18 +81,18 @@ function App() {
         )
       })}
 
-      <div className="away-column sticky bottom-8 right-0 self-end z-10">
+      <div className="away-column sticky bottom-8 right-0 self-end z-10" style={{ viewTransitionName: "trash-column" }}>
         <DropArea 
           className="mb-2"
           onDrop={() => onDrop(0, true)}  
-          active={draggingCardIndexInTrashColumn > 0 || draggingCardIndexInMainColumn >= 0} 
+          active={(draggingCardIndexInTrashColumn >= 0 && draggingCardIndexInTrashColumn !== trashColumn.length - 1) || draggingCardIndexInMainColumn >= 0}
         >
           <div className="flex items-center gap-2 justify-center text-gray-400">
             Poubelle
             <svg 
               className="w-6 h-6" 
               viewBox="0 0 24 24" 
-              fill="none" 
+              fill="none"
               stroke="currentColor" 
               strokeWidth="2" 
               strokeLinecap="round" 
